@@ -27,7 +27,7 @@ public class MySQLDatabase {
             String query = "SELECT name,age,gender,blood_group,phone_number,salary FROM employee_managemen_info WHERE salary=?";
             preparedStatement = connect.prepareStatement(query);
 
-            System.out.println("Enter value : ");
+            System.out.println("Enter Salary : ");
             preparedStatement.setInt(1, sc.nextInt());
             result = preparedStatement.executeQuery();
             if (result.first()) {
